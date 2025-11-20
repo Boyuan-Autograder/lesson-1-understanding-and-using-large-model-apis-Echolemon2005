@@ -12,7 +12,7 @@ def chat_stream(user_text):
     url = "https://api.siliconflow.cn/v1/chat/completions"
     payload = {
         "model": "deepseek-ai/DeepSeek-OCR",
-        "messages": [{"role": "user", "content":"hello,world!"}],
+        "messages": [{"role": "user", "content":user_text}],
         "stream": True
     }
     headers = {
