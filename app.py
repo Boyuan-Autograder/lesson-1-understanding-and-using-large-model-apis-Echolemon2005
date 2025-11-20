@@ -33,7 +33,7 @@ def chat_stream(user_text):
                     choices = data_json.get("choices", [])
                     for choice in choices:
                         delta = choice.get("delta", {})
-                        text = delta.get("content")
+                        text = delta.get("content","")
                         if text:
                             print(text, end="", flush=True)
                 except json.JSONDecodeError:
