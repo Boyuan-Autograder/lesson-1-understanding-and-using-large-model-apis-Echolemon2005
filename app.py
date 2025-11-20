@@ -25,7 +25,7 @@ def chat_stream(user_text):
             if not line:
                 continue
             decoded = line.decode("utf-8").strip()
-            if decoded == "":
+            if decoded == "[DONE]":
                 break
             if decoded.startswith("data:"):
                 try:
